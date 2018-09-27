@@ -1,20 +1,39 @@
 import React from 'react';
 
 class BuilingList extends React.Component {
+
+
+
+
+
 	render() {
 		//console.log('This is my directory file', this.props.data);
-		const { data } = this.props;
+		const { data, filterText, selectedUpdate } = this.props;
 
-		const buildingList = data.map(directory => {
-			return (
-				<tr key={directory.id}>
-					<td>{directory.code} </td>
-					<td> {directory.name} </td>
-				</tr>
-			);
-		});
+						//console.log(selectedBuilding)
 
-		return <div>{buildingList}</div>;
+
+
+		const buildingList = data
+			.filter( building =>{
+				//Remove buildings that don't match the filterText
+				return building.name.toLowerCase().indexOf(filterText.toLowerCase()) >= 0
+			})
+			.map(directory => {
+				return (
+					<tr
+					//ref={selectedBuilding => directory.id = selectedBuilding}
+					onClick={() => selectedUpdate(directory.id)}
+					key={directory.id}>
+						<td>{directory.code} </td>
+						<td> {directory.name} </td>
+					</tr>
+				);
+			});
+
+		return <div>{buildingList}
+
+		</div>;
 	}
 }
 export default BuilingList;
