@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	background-image: url("uf-campus.jpg")
 }
 
 /* ##### general ##### */
@@ -14,8 +15,11 @@ main {
 
 /* ##### Search ##### */
 header {
-	background: #3498db;
-	margin-bottom: 2rem;
+	background: #00529b;
+
+
+	/*background: #3498db;*/
+	/*margin-bottom: 2rem;*/
 }
 
 input[type='text'] {
@@ -24,7 +28,7 @@ input[type='text'] {
 	font-size: 1.3rem;
 	border: none;
 	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	padding: 0 2rem;
 	width: calc(100% - 2rem);
 	height: 4rem;
@@ -33,18 +37,21 @@ input[type='text'] {
 /* ##### NamesList ##### */
 tr {
 	padding: 0;
+	background-color: #ccdef9;
+	background-opacity: 0.5
 }
 th {
 	position: left;
 	list-style: none;
 	padding: 0.25rem 0.75rem;
 	margin: 2px;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 }
 td:hover {
 	position: left;
 	cursor: pointer;
 	background-color: #ddd;
+		background: #00529b;
 }
 
 /* ##### Columns ##### */
@@ -52,30 +59,42 @@ td:hover {
 	float: left;
 	width: 50%;
 	padding: 10px;
+	opacity: 1;
 }
 .column2 {
 	float: left;
 	width: 50%;
 	padding: 20px;
 	background-color: #ccdef9;
+	font-style: normal;
+	opacity: 1;
 }
 
 /* ##### Rows ##### */
 .row {
-	margin: 1rem;
+	background-color: #ddd;
+	opacity: 0.8;
+	/*margin: 1rem;*/
+}
+
+.topRow{
+	  	background: #00529b;
+
 }
 
 .row:after {
-	padding: 1 0rem;
+	/*padding: 1 0rem;*/
 	content: '';
 	display: table;
 	clear: both;
+	opacity: 1;
 }
 
 .tableWrapper {
 	max-height: 800px;
 	overflow: auto;
 	scroll-behavior: smooth;
+
 }
 
 /* ##### Footer ##### */
